@@ -1,0 +1,5 @@
+/* you can target a material directive */
+
+mat-form-field {
+  width: 300px;
+}
