@@ -15,7 +15,7 @@ import { PastTrainingsComponent } from './training/past-trainings/past-trainings
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
-
+import { StopTrainingComponent } from './training/current-training/stop-training.component';
 /*
   - as of Angular 9 HammerJS is no longer required.
 */
@@ -32,6 +32,7 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     WelcomeComponent,
     HeaderComponent,
     SidenavListComponent,
+    StopTrainingComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,5 +44,12 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
   ],
   providers: [],
   bootstrap: [AppComponent],
+
+  /*
+    - if your app happens to bootstrap or dynamically
+      load a component by type imperatively, you must
+      add it to entryComponents explicitly.
+  */
+  entryComponents: [StopTrainingComponent],
 })
 export class AppModule {}
